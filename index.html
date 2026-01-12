@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- FORM -->
+  <div class="form">
+    <h2>Resume Details</h2>
+
+    <input id="name" placeholder="Full Name">
+    <input id="address" placeholder="Address">
+    <input id="mobile" placeholder="Mobile Number">
+    <input id="email" placeholder="Email ID">
+
+    <textarea id="objective" placeholder="Career Objective"></textarea>
+    <textarea id="computer" placeholder="Skills (comma separated)"></textarea>
+    <textarea id="projects" placeholder="Project Details"></textarea>
+    <textarea id="experience" placeholder="Experience"></textarea>
+    <!-- <textarea id="skills" placeholder="Personal Key Skills (comma separated)"></textarea> -->
+
+    <h3>Personal Details</h3>
+     <input id="father" placeholder="Father Name">
+     <input type="date" id="dob" placeholder="Date of Birth">
+<label>Marital Status</label>
+<select id="marital">
+  <option value="">Select</option>
+  <option value="Married">Married</option>
+  <option value="Unmarried">Unmarried</option>
+</select>
+    <input id="nationality" placeholder="Nationality">
+    <input id="language" placeholder="Languages Known">
+
+    <h3>Educational Qualification</h3>
+    <table id="eduInput">
+      <tr>
+        <th>Qualification</th>
+        <th>Institute</th>
+        <th>Board</th>
+        <th>%</th>
+        <th>Year</th>
+        <th>Action</th>
+      </tr>
+    </table>
+
+    <button class="btn add" onclick="addRow()">Add Row</button>
+    <button class="btn generate" onclick="generateResume()">Generate Resume</button>
+    <button class="btn pdf" onclick="window.print()">Download PDF</button>
+<button class="btn clear" type="button" onclick="clearAll()">Clear All</button>
+
+  </div>
+
+  <!-- RESUME -->
+  <div class="resume">
+
+    <h1 id="rName"></h1>
+
+    <!-- RIGHT SIDE CONTACT -->
+    <div class="top-info">
+      📍 <span id="rAddress"></span><br>
+      📞 <span id="rMobile"></span><br>
+      ✉ <span id="rEmail"></span>
+      
+    </div>
+
+ <div class="section objective">
+  <h3>CAREER OBJECTIVE</h3>
+  <p id="rObjective"></p>
+</div>
+
+
+    <div class="section">
+      <h3>EDUCATIONAL QUALIFICATION</h3>
+      <table id="eduOutput">
+        <tr>
+          <th>Qualification</th>
+          <th>Institute</th>
+          <th>Board</th>
+          <th>%</th>
+          <th>Year</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>SKILLS</h3>
+      <ul id="rComputer"></ul>
+    </div>
+
+    <div class="section">
+      <h3>PROJECT DETAILS</h3>
+      <p id="rProjects"></p>
+    </div>
+
+    <div class="section">
+      <h3>EXPERIENCE</h3>
+      <p id="rExperience"></p>
+    </div>
+
+    <!-- <div class="section">
+      <h3>PERSONAL KEY SKILLS</h3>
+      <ul id="rSkills"></ul>
+    </div> -->
+
+    <div class="section">
+      <h3>PERSONAL DETAILS</h3>
+      <p>
+       <b>Name:</b> <span id="rNamePD"></span><br>
+       <b>Father Name:</b> <span id="rFather"></span><br>
+       <b>Date of Birth: </b><span id="rDob"></span><br>
+       <b>Marital Status:</b> <span id="rMarital"></span><br>
+       <b>Nationality:</b> <span id="rNationality"></span><br>
+       <b>Languages Known:</b><span id="rLanguage"></span>
+      </p>
+    </div>
+
+<div class="section declaration">
+  <h3>DECLARATION</h3>
+  <p>
+    I hereby declare that the above-mentioned information is correct and true to the best of 
+    my knowledge and I bear the responsibility for the correctness of the above-mentioned particulars.
+  </p>
+</div>
+
+    <!-- RIGHT SIDE SIGNATURE -->
+    <div class="signature">
+      Yours Faithfully,<br>
+      <b id="signName"></b>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

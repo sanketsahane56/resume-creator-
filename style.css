@@ -1,0 +1,272 @@
+body {
+  background: #e5e7eb;
+  font-family: Arial;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* FORM */
+.form {
+  width: 35%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn.add { background: #16a34a; }
+.btn.generate { background: #2563eb; }
+.btn.pdf { background: #7c3aed; }
+
+/* RESUME */
+.resume {
+  width: 65%;
+  background: white;
+  padding: 30px;
+  font-family: "Times New Roman";
+}
+
+.resume h1 {
+   text-align: left;    /* change from center to left */
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.top-info {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.section h3 {
+  background: #e5e7eb;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+#eduOutput {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#eduOutput th, #eduOutput td {
+  border: 1px solid black;
+  padding: 6px;
+  text-align: center;   /* <-- add this line */
+}
+
+#eduInput th, #eduInput td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;   /* <-- add this line too */
+}
+
+
+
+.signature {
+  text-align: right;
+  margin-top: 40px;
+}
+
+@media print {
+  .form { display: none; }
+  .resume { width: 100%; }
+}
+
+
+/* FORM CONTAINER */
+.form {
+  width: 35%;
+  background: #f0eeee;          /* light grey background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* soft shadow */
+  font-family: Arial, sans-serif;
+}
+
+/* HEADINGS */
+.form h2, .form h3 {
+  color: #111827; /* dark grey/black */
+  margin-bottom: 10px;
+}
+
+/* INPUT & TEXTAREA */
+.form input, .form textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border: 1.5px solid #d1d5db; /* soft border */
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus, .form textarea:focus {
+  border-color: #2563eb; /* blue on focus */
+  box-shadow: 0 0 5px rgba(37,99,235,0.3);
+  outline: none;
+}
+
+/* PLACEHOLDER */
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #9ca3af; /* light grey placeholder */
+  font-style: italic;
+}
+
+/* BUTTONS */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Add Row Button */
+.btn.add {
+  background: linear-gradient(135deg, #16a34a, #22c55e); /* green gradient */
+}
+
+.btn.add:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+}
+
+/* Generate Resume Button */
+.btn.generate {
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* blue gradient */
+}
+
+.btn.generate:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+}
+
+/* Download PDF Button */
+.btn.pdf {
+  background: linear-gradient(135deg, #7c3aed, #9333ea); /* purple gradient */
+}
+
+.btn.pdf:hover {
+  background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* EDUCATION TABLE (Form) */
+#eduInput {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+#eduInput th, #eduInput td {
+  border: 1px solid #d1d5db;
+  padding: 6px;
+  text-align: left;
+}
+
+#eduInput input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+#eduInput td button {
+  width: 100%;
+  padding: 4px;
+  background: #ef4444; /* red delete button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#eduInput td button:hover {
+  background: #b91c1c;
+}
+
+@media print {
+  body {
+    background: white;
+    margin: 0;               /* remove browser default margin */
+  }
+  .form { 
+    display: none;           /* hide the form */
+  }
+  /* Hide default page headers/footers in print */
+  @page {
+    margin: 0;
+  }
+}
+/* Declaration section text */
+.section.declaration p {
+  text-indent: 40px;   /* space from start like a tab */
+  line-height: 1.6;    /* optional: improve readability */
+  margin-top: 10px;
+}
+/* Career Objective section text */
+.section.objective p {
+  text-indent: 40px;   /* tab/space from start */
+  line-height: 1.6;    /* readability */
+  margin-top: 5px;
+}
+.btn.clear {
+  background: linear-gradient(135deg, #ef4444, #dc2626); /* red gradient */
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.clear:hover {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+}
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  line-height: 1.4;
+
+}
+/* Declaration section text */
+.section.declaration p {
+  text-indent: 40px;   /* space from start like a tab */
+  line-height: 1.6;    /* optional: improve readability */
+  margin-top: 10px;
+}
+/* Career Objective section text */
+.section.objective p {
+  text-indent: 40px;   /* tab/space from start */
+  line-height: 1.6;    /* readability */
+  margin-top: 5px;
+}
